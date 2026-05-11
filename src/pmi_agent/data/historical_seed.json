@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "purpose": "Hand-curated seed of comparable awarded contracts for media-production tender scope (video / drone / timelapse / photography / event coverage).",
+    "synthetic": true,
+    "production_note": "The production Historical Analyst queries the TED API (https://ted.europa.eu/api/v3.0/notices) directly. This file is a clearly-labelled placeholder for the demo: realistic structure and procurement-plausible numbers, but contracting authority names are generic placeholders rather than real entities. Switching to live TED is a contained next step — the seed loader returns the same ComparableTender shape regardless of source.",
+    "curated_at": "2026-05-11",
+    "curated_by": "Eoin Lane"
+  },
+  "comparables": [
+    {
+      "synthetic": true,
+      "identifier": "demo-seed-001",
+      "title": "Audiovisual production framework for infrastructure project communications",
+      "contracting_authority": "Public-sector infrastructure body (placeholder)",
+      "cpv_codes": ["92110000", "92111200", "79961000"],
+      "scope_summary": "Multi-year framework covering video production, drone footage, photography, and event coverage for capital-project communications. Two-supplier ranked award. Nationwide scope.",
+      "awarded_value_eur": null,
+      "awarded_date": "2024-08-15",
+      "response_count": 18,
+      "evaluation_duration_months": 4,
+      "notes": "Bundled video + drone + photography scope, ranked-multiple award. Moderate response pool."
+    },
+    {
+      "synthetic": true,
+      "identifier": "demo-seed-002",
+      "title": "Drone aerial photography and survey services framework",
+      "contracting_authority": "Infrastructure agency (placeholder)",
+      "cpv_codes": ["79961100", "92111200"],
+      "scope_summary": "Drone aerial photography and timelapse survey for major infrastructure projects, nationwide. Specialist drone-only scope; no studio video production.",
+      "awarded_value_eur": null,
+      "awarded_date": "2023-11-30",
+      "response_count": 7,
+      "evaluation_duration_months": 2,
+      "notes": "Unbundled drone-specialist scope — smaller, more focused respondent pool."
+    },
+    {
+      "synthetic": true,
+      "identifier": "demo-seed-003",
+      "title": "Promotional video and content production services framework",
+      "contracting_authority": "Tourism / culture body (placeholder)",
+      "cpv_codes": ["92111200", "79341000"],
+      "scope_summary": "Promotional video production: interviews, stills, editing, voiceover, for public-facing campaigns. No drone, no timelapse, no ISL.",
+      "awarded_value_eur": null,
+      "awarded_date": "2024-03-22",
+      "response_count": 34,
+      "evaluation_duration_months": 7,
+      "notes": "Studio video production scope — broadly accessible, large bidder pool, long evaluation."
+    },
+    {
+      "synthetic": true,
+      "identifier": "demo-seed-004",
+      "title": "Multimedia production framework including Irish-language and ISL accessibility",
+      "contracting_authority": "Public health body (placeholder)",
+      "cpv_codes": ["92111200", "79341000", "79961000"],
+      "scope_summary": "Multi-year framework covering video, photography, animation, ISL interpretation, and Irish-language content. Single supplier per call-off.",
+      "awarded_value_eur": null,
+      "awarded_date": "2022-09-14",
+      "response_count": 22,
+      "evaluation_duration_months": 5,
+      "notes": "Includes ISL and Irish-language requirements similar to drone tender; medium bidder pool."
+    },
+    {
+      "synthetic": true,
+      "identifier": "demo-seed-005",
+      "title": "Long-duration timelapse construction documentation services",
+      "contracting_authority": "Construction-sector body (placeholder)",
+      "cpv_codes": ["92111200"],
+      "scope_summary": "6-12 month timelapse documentation of major capital construction projects across multiple nationwide sites.",
+      "awarded_value_eur": null,
+      "awarded_date": "2024-01-18",
+      "response_count": 5,
+      "evaluation_duration_months": 2,
+      "notes": "Highly specialised — small pool of timelapse-capable suppliers."
+    },
+    {
+      "synthetic": true,
+      "identifier": "demo-seed-006",
+      "title": "Combined drone, video, photography, and event coverage framework",
+      "contracting_authority": "EU national transport authority (placeholder)",
+      "cpv_codes": ["92111200", "79961000", "79961100"],
+      "scope_summary": "Bundled framework covering drone footage, studio video, vox-pop interviews, stills photography, event coverage, and multilingual subtitling. Two-supplier ranked award. Nationwide.",
+      "awarded_value_eur": null,
+      "awarded_date": "2023-06-05",
+      "response_count": 28,
+      "evaluation_duration_months": 9,
+      "notes": "Highly comparable bundled scope; large response volume; long evaluation. The closest match in the seed."
+    }
+  ]
+}

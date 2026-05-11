@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "NTA Pre-Market Intelligence Agent — Phase 1 reference build"
 readme = "README.md"
 license = "Apache-2.0"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.13"
 authors = [
     { name = "Eoin Lane" },
     { name = "Cathal Bellew" },
@@ -28,6 +28,7 @@ dev = [
 
 [project.scripts]
 pmi-spec-analyse = "pmi_agent.cli.spec_analyse:main"
+pmi-historical-analyse = "pmi_agent.cli.historical_analyse:main"
 
 [build-system]
 requires = ["hatchling"]
