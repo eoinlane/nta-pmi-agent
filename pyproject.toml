@@ -30,6 +30,7 @@ dev = [
 pmi-spec-analyse = "pmi_agent.cli.spec_analyse:main"
 pmi-historical-analyse = "pmi_agent.cli.historical_analyse:main"
 pmi-report = "pmi_agent.cli.report:main"
+pmi-validate = "pmi_agent.cli.validate:main"
 
 [build-system]
 requires = ["hatchling"]
