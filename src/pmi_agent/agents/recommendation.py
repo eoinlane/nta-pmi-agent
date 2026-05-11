@@ -57,7 +57,10 @@ forecast, and (when supplied) market depth and cost sanity-check signals.
 Produce three things via the submit_recommendations tool:
 
 1. scope_flags — issues with the draft. Each MUST have:
-   - kind drawn from the ScopeFlagKind enum
+   - kind drawn from THIS closed enum (and ONLY this enum):
+       bundling_risk, spec_drift_from_market, qualification_overreach,
+       missing_geographic_constraint, missing_key_personnel_constraint,
+       unusual_sample_requirement
    - description — what the issue is, in 1-2 sentences
    - evidence_quote — VERBATIM text taken from the profile's \
 unusual_requirements list, qualification_barriers descriptions, or summary. \
@@ -65,9 +68,13 @@ Do not paraphrase; copy the source string.
    - severity (low / medium / high) reflecting how decisively the evidence \
 supports the flag.
 
-2. recommendations — choose ONLY from this closed taxonomy:
-     SPLIT_TENDER, PIN_RFI_FIRST, TIGHTEN_QUALIFICATION, \
-GEOGRAPHIC_FILTER, VALUE_BAND_REVIEW, KEY_PERSONNEL_FILTER.
+2. recommendations — choose ONLY from THIS closed enum (and ONLY this enum):
+     split_tender, pin_rfi_first, tighten_qualification, \
+geographic_filter, value_band_review, key_personnel_filter.
+
+CRITICAL: the scope_flag kinds and the recommendation kinds are TWO DIFFERENT \
+ENUMS. Never put a recommendation kind (like value_band_review) into a \
+scope_flag's kind, and never put a scope_flag kind into a recommendation.
    Each MUST have:
    - kind from RecommendationKind
    - rationale — concrete, citing specific scope_flags or forecast numbers
