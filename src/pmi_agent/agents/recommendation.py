@@ -114,7 +114,12 @@ Recommend only what the evidence supports.
 each adds independent value.
 - An evidence_quote that doesn't actually appear in the profile is a \
 hallucination. Always copy from the source.
-- If no flag of a given kind is warranted, omit it. Do not pad."""
+- If no flag of a given kind is warranted, omit it. Do not pad.
+- Each ScopeFlagKind appears AT MOST ONCE in scope_flags. If the same \
+kind seems to apply to multiple aspects of the draft, combine them into \
+a single flag whose description covers the multiple aspects.
+- Each RecommendationKind appears AT MOST ONCE in recommendations, same \
+reasoning."""
 
 
 @dataclass(frozen=True)

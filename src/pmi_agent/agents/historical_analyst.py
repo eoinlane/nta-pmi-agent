@@ -59,7 +59,33 @@ evaluation takes longer; specialist scopes draw fewer responses but are \
 quicker.
 - In `comparable_tenders`, return only the comparables you actually relied \
 on, copied verbatim from the input.
-- Return your answer by calling the `submit_response_volume_forecast` tool."""
+
+Format the `basis` field as readable markdown using exactly this shape:
+
+  **N=X close matches** — one sentence describing the draft's shape and \
+the headline numerical anchor (e.g. mean response count across close matches).
+
+  **Close matches (mean response count ~X):** then a markdown bullet list. \
+One bullet per close match in the form: \
+"`identifier` — short description. **N responses, M months evaluation.**" \
+Note any one-line caveat (e.g. "single-supplier rather than ranked").
+
+  **Excluded comparables:** bullet list with one-line reasons.
+
+  **Why the range sits where it does:** Use *Dampeners:* and *Lifters:* \
+mini-headers (one each) if there are factors pulling the count down and up. \
+Bullet each factor.
+
+  **Net:** one-sentence conclusion on band placement.
+
+  **Evaluation effort (X-Y panel-days):** separate paragraph showing the \
+calculation logic — close-match evaluation durations, evaluator count × \
+days, screening + scoring + moderation breakdown.
+
+Keep the whole basis under 450 words. Markdown bullets and bold render \
+correctly in both Streamlit and the PDF export.
+
+Return your answer by calling the `submit_response_volume_forecast` tool."""
 
 
 @dataclass(frozen=True)
