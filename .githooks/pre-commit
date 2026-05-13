@@ -4,10 +4,16 @@
 
 staged=$(git diff --cached --name-only)
 
-if printf '%s\n' "$staged" | grep -qE '(^|/)samples/|(^|/)drafts/|(^|/)reports/'; then
+if printf '%s\n' "$staged" | grep -qE '(^|/)samples/|(^|/)drafts/|(^|/)reports/|(^|/)presentation/'; then
   echo "ERROR: confidential path detected in staged changes."
-  echo "       samples/, drafts/, and reports/ must not be committed."
+  echo "       samples/, drafts/, reports/, and presentation/ must not be committed."
   echo "       Unstage with: git restore --staged <path>"
+  exit 1
+fi
+
+if printf '%s\n' "$staged" | grep -qE '\.(pptx|ppt|key)$|(^|/)~\$'; then
+  echo "ERROR: Office deck or lockfile staged."
+  echo "       Decks (.pptx/.ppt/.key) and ~\$* lockfiles must not be committed."
   exit 1
 fi
 

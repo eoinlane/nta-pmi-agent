@@ -27,10 +27,17 @@ dist/
 *.swp
 .DS_Store
 
-# Confidentiality — never commit tender data or drafts
+# Confidentiality — never commit tender data, drafts, or demo decks
 samples/
 drafts/
 reports/
+presentation/
+
+# Office documents and their lockfiles — keep decks out of the public repo
+*.pptx
+*.ppt
+*.key
+~$*
 
 # Local artefacts
 audit.db
