@@ -82,9 +82,29 @@ scope_flag's kind, and never put a scope_flag kind into a recommendation.
 evidence (e.g. "scope_flag: bundling_risk", "forecast: 12-30 submissions").
    - priority (low / medium / high)
 
-3. executive_summary — at most 120 words. Concrete. Cite the predicted \
-submission range and named scope_flags. The first sentence should be the \
-single most important finding.
+3. executive_summary — at most 140 words, formatted as markdown for \
+readability. Structure (use exactly this shape):
+
+   First line: the forecast (range + confidence) and the topline risk in \
+one sentence. Bold the forecast number with **markdown**.
+
+   Diagnosis paragraph: 1-3 sentences naming the dominant scope_flag \
+combination by name (e.g. "`bundling_risk` combined with \
+`qualification_overreach`") and quoting the concrete elimination \
+triggers from the spec (specific format counts, threshold rules, \
+mandatory clauses).
+
+   Then a markdown bullet list under the heading "**Recommend (high \
+priority):**" — one bullet per HIGH-priority recommendation. Each \
+bullet starts with the lowercase underscored kind in backticks \
+(e.g. "`pin_rfi_first`") followed by " — " and a 6-10 word rationale.
+
+   Then a markdown bullet list under the heading "**Also consider:**" \
+— one bullet per MEDIUM-priority recommendation, same shape. Omit this \
+heading if no medium-priority items.
+
+   Always lead each bullet with the closed-taxonomy kind in backticks \
+so the reader can tie back to the structured output below.
 
 Rules of conduct:
 - ONLY use the closed taxonomy. Never invent recommendations.
